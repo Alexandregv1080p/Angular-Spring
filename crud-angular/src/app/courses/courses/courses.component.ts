@@ -23,7 +23,8 @@ export class CoursesComponent implements OnInit  {
     private courserService: CoursesService,
     public dialog: MatDialog
     ){
-    this.courses$ = this.courserService.list().pipe(
+    this.courses$ = this.courserService.list()
+    .pipe(
       catchError(error => {
         this.onError('Erro ao carregar cursos.')
         return of([]) 
@@ -32,6 +33,7 @@ export class CoursesComponent implements OnInit  {
   }
   onError(errorMsg: string) {
     this.dialog.open(ErrorDialogComponent, {
+      width: '250px',
       data: errorMsg
     });
   }

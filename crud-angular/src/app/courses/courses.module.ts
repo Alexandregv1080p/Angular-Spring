@@ -1,4 +1,3 @@
-import { SharedModule } from './../shared/shared.module';
 import { CoursesComponent } from './courses/courses.component';
 import { MatTableModule } from '@angular/material/table';
 import { NgModule } from '@angular/core';
@@ -9,6 +8,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { AppMaterialModule } from '../shared/app-material/app-material.module';
 
 @NgModule({
   declarations: [
@@ -17,12 +17,9 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
   imports: [
     CommonModule,
     CoursesRoutingModule,
-    MatTableModule,
-    MatCardModule,
-    MatToolbarModule,
     HttpClientModule,
-    MatProgressSpinnerModule,
-    SharedModule
+    AppMaterialModule
+    
   ]
 })
 export class CoursesModule { }
