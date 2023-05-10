@@ -12,9 +12,9 @@ import { ErrorDialogComponent } from '../components/error-dialog/error-dialog.co
         MatTableModule,
         MatToolbarModule,
         MatDialogModule,
-        MatProgressSpinnerModule
-    ],
-    entryComponents: [ErrorDialogComponent]
+        MatProgressSpinnerModule,
+        
+    ]
     
 })
 export class AppMaterialModule {}
